@@ -341,6 +341,14 @@ $(function(){
         $(".filter,.changePwWindow")
         .addClass("display");
     })
+
+    $(".mixpass .betBtn").on("click",function(){
+        $(".jumpWindow")
+        .removeClass("display");
+
+        $(".filter,.checkMixWindow")
+        .addClass("display");
+    })
 })
 
 //mixpass
@@ -415,6 +423,31 @@ $(function(){
         $(this).closest("td")
         .siblings().find("button")
         .removeClass("active");
+    })
+
+    var f = 0;
+    $(".mixpass .calculate button").on("click",function(){
+        var n = parseInt($(this).val());
+
+        f = f + n;
+
+        $(".mixpass .calculate label:first-child input")
+        .attr("value",""+ f +"");
+
+        if($(this).hasClass("clear") || $(this).hasClass("betBtn"))
+        {
+            $(".mixpass .calculate label:first-child input")
+            .attr("value","");
+        }
+
+        if($(".mixpass .calculate label:first-child input").val() != "")
+        {
+            $(".mixpass .betBtn").prop("disabled",false);
+        }
+        else
+        {
+            $(".mixpass .betBtn").prop("disabled",true);
+        }
     })
 })
 

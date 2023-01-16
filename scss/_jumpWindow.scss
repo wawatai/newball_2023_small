@@ -205,7 +205,8 @@
         }
 
         &.betWindow,
-        &.checkWindow {
+        &.checkWindow,
+        &.checkMixWindow {
             width: 580px;
 
             .content {
@@ -215,6 +216,13 @@
                 .topWindow {
                     width: 100%;
                     height: auto;
+
+                    &:not(:first-child) {
+
+                        .smallTitle {
+                            border-top: solid 1px $mainColor_4;
+                        }
+                    }
     
                     .smallTitle {
                         width: 100%;
@@ -281,6 +289,14 @@
                             }
                         }
                     }
+                }
+
+                .mixBox {
+                    width: 100%;
+                    height: auto;
+                    max-height: 270px;
+                    overflow-y: overlay;
+                    @include scrollBarStyle_1;
                 }
 
                 .moneyBox {

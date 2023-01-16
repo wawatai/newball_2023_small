@@ -4935,18 +4935,21 @@ html body .filter .jumpWindow.controlWindow .content .box .versionBox div p span
   font-size: 12px;
   margin-left: 10px;
 }
-html body .filter .jumpWindow.betWindow, html body .filter .jumpWindow.checkWindow {
+html body .filter .jumpWindow.betWindow, html body .filter .jumpWindow.checkWindow, html body .filter .jumpWindow.checkMixWindow {
   width: 580px;
 }
-html body .filter .jumpWindow.betWindow .content, html body .filter .jumpWindow.checkWindow .content {
+html body .filter .jumpWindow.betWindow .content, html body .filter .jumpWindow.checkWindow .content, html body .filter .jumpWindow.checkMixWindow .content {
   width: 100%;
   height: auto;
 }
-html body .filter .jumpWindow.betWindow .content .topWindow, html body .filter .jumpWindow.checkWindow .content .topWindow {
+html body .filter .jumpWindow.betWindow .content .topWindow, html body .filter .jumpWindow.checkWindow .content .topWindow, html body .filter .jumpWindow.checkMixWindow .content .topWindow {
   width: 100%;
   height: auto;
 }
-html body .filter .jumpWindow.betWindow .content .topWindow .smallTitle, html body .filter .jumpWindow.checkWindow .content .topWindow .smallTitle {
+html body .filter .jumpWindow.betWindow .content .topWindow:not(:first-child) .smallTitle, html body .filter .jumpWindow.checkWindow .content .topWindow:not(:first-child) .smallTitle, html body .filter .jumpWindow.checkMixWindow .content .topWindow:not(:first-child) .smallTitle {
+  border-top: solid 1px #465a79;
+}
+html body .filter .jumpWindow.betWindow .content .topWindow .smallTitle, html body .filter .jumpWindow.checkWindow .content .topWindow .smallTitle, html body .filter .jumpWindow.checkMixWindow .content .topWindow .smallTitle {
   width: 100%;
   height: 28px;
   border-bottom: solid 1px #465a79;
@@ -4958,18 +4961,18 @@ html body .filter .jumpWindow.betWindow .content .topWindow .smallTitle, html bo
           align-items: center;
   padding: 0 10px 2px;
 }
-html body .filter .jumpWindow.betWindow .content .topWindow .smallTitle p, html body .filter .jumpWindow.checkWindow .content .topWindow .smallTitle p {
+html body .filter .jumpWindow.betWindow .content .topWindow .smallTitle p, html body .filter .jumpWindow.checkWindow .content .topWindow .smallTitle p, html body .filter .jumpWindow.checkMixWindow .content .topWindow .smallTitle p {
   color: #feb300;
   font-size: 13px;
 }
-html body .filter .jumpWindow.betWindow .content .topWindow .textBox, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox {
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox {
   width: 100%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide {
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .leftSide {
   width: 45%;
   height: auto;
   border-right: solid 1px #465a79;
@@ -4984,7 +4987,7 @@ html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide, 
           justify-content: space-between;
   padding: 0 10px;
 }
-html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide .team, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide .team {
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide .team, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide .team, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .leftSide .team {
   width: 100%;
   color: #feb300;
   font-size: 14px;
@@ -4992,38 +4995,56 @@ html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide .
   text-overflow: ellipsis;
   overflow: hidden;
 }
-html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide p:not(.team), html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide p:not(.team) {
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide p:not(.team), html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide p:not(.team), html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .leftSide p:not(.team) {
   color: #ce1427;
   font-size: 14px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide p:not(.team) span, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide p:not(.team) span {
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .leftSide p:not(.team) span, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .leftSide p:not(.team) span, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .leftSide p:not(.team) span {
   color: #ffffff;
 }
-html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide {
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .rightSide {
   width: 60%;
   height: auto;
   padding: 15px 10px;
 }
-html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide p, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide p {
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide p, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide p, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .rightSide p {
   color: #feb300;
   font-size: 1px;
 }
-html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide p:last-child, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide p:last-child {
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide p:last-child, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide p:last-child, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .rightSide p:last-child {
   margin-top: 8px;
 }
-html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide p span, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide p span {
+html body .filter .jumpWindow.betWindow .content .topWindow .textBox .rightSide p span, html body .filter .jumpWindow.checkWindow .content .topWindow .textBox .rightSide p span, html body .filter .jumpWindow.checkMixWindow .content .topWindow .textBox .rightSide p span {
   color: #ffffff;
 }
-html body .filter .jumpWindow.betWindow .content .moneyBox, html body .filter .jumpWindow.checkWindow .content .moneyBox {
+html body .filter .jumpWindow.betWindow .content .mixBox, html body .filter .jumpWindow.checkWindow .content .mixBox, html body .filter .jumpWindow.checkMixWindow .content .mixBox {
+  width: 100%;
+  height: auto;
+  max-height: 270px;
+  overflow-y: overlay;
+}
+html body .filter .jumpWindow.betWindow .content .mixBox::-webkit-scrollbar, html body .filter .jumpWindow.checkWindow .content .mixBox::-webkit-scrollbar, html body .filter .jumpWindow.checkMixWindow .content .mixBox::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+html body .filter .jumpWindow.betWindow .content .mixBox::-webkit-scrollbar-thumb, html body .filter .jumpWindow.checkWindow .content .mixBox::-webkit-scrollbar-thumb, html body .filter .jumpWindow.checkMixWindow .content .mixBox::-webkit-scrollbar-thumb {
+  background: #feb300;
+  border-radius: 30px;
+}
+html body .filter .jumpWindow.betWindow .content .mixBox::-webkit-scrollbar-track, html body .filter .jumpWindow.checkWindow .content .mixBox::-webkit-scrollbar-track, html body .filter .jumpWindow.checkMixWindow .content .mixBox::-webkit-scrollbar-track {
+  background: #2e3f57;
+  border-radius: 30px;
+}
+html body .filter .jumpWindow.betWindow .content .moneyBox, html body .filter .jumpWindow.checkWindow .content .moneyBox, html body .filter .jumpWindow.checkMixWindow .content .moneyBox {
   width: 100%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-html body .filter .jumpWindow.betWindow .content .moneyBox div, html body .filter .jumpWindow.checkWindow .content .moneyBox div {
+html body .filter .jumpWindow.betWindow .content .moneyBox div, html body .filter .jumpWindow.checkWindow .content .moneyBox div, html body .filter .jumpWindow.checkMixWindow .content .moneyBox div {
   width: 34%;
   height: auto;
   background: #2e3f57;
@@ -5031,14 +5052,14 @@ html body .filter .jumpWindow.betWindow .content .moneyBox div, html body .filte
   border-left: none;
   padding: 15px 10px;
 }
-html body .filter .jumpWindow.betWindow .content .moneyBox div:last-child, html body .filter .jumpWindow.checkWindow .content .moneyBox div:last-child {
+html body .filter .jumpWindow.betWindow .content .moneyBox div:last-child, html body .filter .jumpWindow.checkWindow .content .moneyBox div:last-child, html body .filter .jumpWindow.checkMixWindow .content .moneyBox div:last-child {
   border-right: none;
 }
-html body .filter .jumpWindow.betWindow .content .moneyBox div p, html body .filter .jumpWindow.checkWindow .content .moneyBox div p {
+html body .filter .jumpWindow.betWindow .content .moneyBox div p, html body .filter .jumpWindow.checkWindow .content .moneyBox div p, html body .filter .jumpWindow.checkMixWindow .content .moneyBox div p {
   color: #ffffff;
   font-size: 14px;
 }
-html body .filter .jumpWindow.betWindow .content .betBox, html body .filter .jumpWindow.checkWindow .content .betBox {
+html body .filter .jumpWindow.betWindow .content .betBox, html body .filter .jumpWindow.checkWindow .content .betBox, html body .filter .jumpWindow.checkMixWindow .content .betBox {
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -5049,11 +5070,11 @@ html body .filter .jumpWindow.betWindow .content .betBox, html body .filter .jum
           justify-content: space-between;
   padding: 15px;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide {
   width: 49%;
   height: auto;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox {
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -5068,11 +5089,11 @@ html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox, ht
   position: relative;
   margin-bottom: 10px;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox p, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox p {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox p, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox p, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox p {
   color: #feb300;
   font-size: 14px;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox input {
   width: 160px;
   height: 35px;
   background: #ffffff;
@@ -5082,28 +5103,28 @@ html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox inp
   font-size: 14px;
   padding-left: 5px;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input::-webkit-input-placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input::-webkit-input-placeholder {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input::-webkit-input-placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input::-webkit-input-placeholder, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox input::-webkit-input-placeholder {
   color: #19202a;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input::-moz-placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input::-moz-placeholder {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input::-moz-placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input::-moz-placeholder, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox input::-moz-placeholder {
   color: #19202a;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input:-ms-input-placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input:-ms-input-placeholder {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input:-ms-input-placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input:-ms-input-placeholder, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox input:-ms-input-placeholder {
   color: #19202a;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input::-ms-input-placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input::-ms-input-placeholder {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input::-ms-input-placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input::-ms-input-placeholder, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox input::-ms-input-placeholder {
   color: #19202a;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input::placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input::placeholder {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox input::placeholder, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox input::placeholder, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox input::placeholder {
   color: #19202a;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox span, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox span {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .inputBox span, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .inputBox span, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .inputBox span {
   color: #19202a;
   font-size: 14px;
   position: absolute;
   right: 10px;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .check {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .check, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .check {
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -5116,7 +5137,7 @@ html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check, html 
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check .cube, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .check .cube {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check .cube, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .check .cube, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .check .cube {
   display: block;
   width: 14px;
   height: 14px;
@@ -5128,7 +5149,7 @@ html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check .cube,
   cursor: pointer;
   margin-right: 10px;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check .cube.active::after, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .check .cube.active::after {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check .cube.active::after, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .check .cube.active::after, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .check .cube.active::after {
   content: "";
   position: absolute;
   top: -8px;
@@ -5136,11 +5157,11 @@ html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check .cube.
   width: 18px;
   height: 18px;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check p, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .check p {
+html body .filter .jumpWindow.betWindow .content .betBox .leftSide .check p, html body .filter .jumpWindow.checkWindow .content .betBox .leftSide .check p, html body .filter .jumpWindow.checkMixWindow .content .betBox .leftSide .check p {
   color: #feb300;
   font-size: 16px;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .rightSide, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide {
+html body .filter .jumpWindow.betWindow .content .betBox .rightSide, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide {
   width: 50%;
   height: auto;
   display: -ms-grid;
@@ -5149,7 +5170,7 @@ html body .filter .jumpWindow.betWindow .content .betBox .rightSide, html body .
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .rightSide button, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button {
+html body .filter .jumpWindow.betWindow .content .betBox .rightSide button, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button {
   width: auto;
   height: 35px;
   background: #f5f5f5;
@@ -5161,20 +5182,20 @@ html body .filter .jumpWindow.betWindow .content .betBox .rightSide button, html
   padding-bottom: 2px;
   font-size: 18px;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:hover, html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:active, html body .filter .jumpWindow.betWindow .content .betBox .rightSide button.active, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:hover, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:active, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button.active {
+html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:hover, html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:active, html body .filter .jumpWindow.betWindow .content .betBox .rightSide button.active, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:hover, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:active, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button.active, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:hover, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:active, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button.active {
   background: #feb300;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:disabled, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:disabled {
+html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:disabled, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:disabled, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:disabled {
   background: #5c6d79;
   color: #d2d2d2;
 }
-html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:last-child, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:last-child {
+html body .filter .jumpWindow.betWindow .content .betBox .rightSide button:last-child, html body .filter .jumpWindow.checkWindow .content .betBox .rightSide button:last-child, html body .filter .jumpWindow.checkMixWindow .content .betBox .rightSide button:last-child {
   -ms-grid-column: 1;
       grid-column-start: 1;
   -ms-grid-column-span: 2;
   grid-column-end: 3;
 }
-html body .filter .jumpWindow.betWindow .content .checkBox, html body .filter .jumpWindow.checkWindow .content .checkBox {
+html body .filter .jumpWindow.betWindow .content .checkBox, html body .filter .jumpWindow.checkWindow .content .checkBox, html body .filter .jumpWindow.checkMixWindow .content .checkBox {
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -5182,7 +5203,7 @@ html body .filter .jumpWindow.betWindow .content .checkBox, html body .filter .j
   display: flex;
   padding: 20px 15px;
 }
-html body .filter .jumpWindow.betWindow .content .checkBox .leftSide, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide {
+html body .filter .jumpWindow.betWindow .content .checkBox .leftSide, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide, html body .filter .jumpWindow.checkMixWindow .content .checkBox .leftSide {
   width: 50%;
   height: auto;
   border-right: solid 1px #465a79;
@@ -5193,7 +5214,7 @@ html body .filter .jumpWindow.betWindow .content .checkBox .leftSide, html body 
       -ms-flex-align: center;
           align-items: center;
 }
-html body .filter .jumpWindow.betWindow .content .checkBox .leftSide i, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide i {
+html body .filter .jumpWindow.betWindow .content .checkBox .leftSide i, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide i, html body .filter .jumpWindow.checkMixWindow .content .checkBox .leftSide i {
   width: 20px;
   height: 20px;
   background: #00c613;
@@ -5201,7 +5222,7 @@ html body .filter .jumpWindow.betWindow .content .checkBox .leftSide i, html bod
   position: relative;
   margin-right: 10px;
 }
-html body .filter .jumpWindow.betWindow .content .checkBox .leftSide i::before, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide i::before {
+html body .filter .jumpWindow.betWindow .content .checkBox .leftSide i::before, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide i::before, html body .filter .jumpWindow.checkMixWindow .content .checkBox .leftSide i::before {
   content: "";
   position: absolute;
   width: 4px;
@@ -5213,25 +5234,25 @@ html body .filter .jumpWindow.betWindow .content .checkBox .leftSide i::before, 
   top: 48%;
   left: 50%;
 }
-html body .filter .jumpWindow.betWindow .content .checkBox .leftSide p, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide p {
+html body .filter .jumpWindow.betWindow .content .checkBox .leftSide p, html body .filter .jumpWindow.checkWindow .content .checkBox .leftSide p, html body .filter .jumpWindow.checkMixWindow .content .checkBox .leftSide p {
   color: #00c613;
   font-size: 16px;
 }
-html body .filter .jumpWindow.betWindow .content .checkBox .rightSide, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide {
+html body .filter .jumpWindow.betWindow .content .checkBox .rightSide, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide, html body .filter .jumpWindow.checkMixWindow .content .checkBox .rightSide {
   width: 50%;
   height: auto;
   padding: 0 10px;
 }
-html body .filter .jumpWindow.betWindow .content .checkBox .rightSide p, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide p {
+html body .filter .jumpWindow.betWindow .content .checkBox .rightSide p, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide p, html body .filter .jumpWindow.checkMixWindow .content .checkBox .rightSide p {
   color: #ffffff;
   font-size: 13px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-html body .filter .jumpWindow.betWindow .content .checkBox .rightSide p:last-child, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide p:last-child {
+html body .filter .jumpWindow.betWindow .content .checkBox .rightSide p:last-child, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide p:last-child, html body .filter .jumpWindow.checkMixWindow .content .checkBox .rightSide p:last-child {
   margin: 0;
 }
-html body .filter .jumpWindow.betWindow .content .checkBox .rightSide p span, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide p span {
+html body .filter .jumpWindow.betWindow .content .checkBox .rightSide p span, html body .filter .jumpWindow.checkWindow .content .checkBox .rightSide p span, html body .filter .jumpWindow.checkMixWindow .content .checkBox .rightSide p span {
   color: #feb300;
   margin-left: 10px;
 }
