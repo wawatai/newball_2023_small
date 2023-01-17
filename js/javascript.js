@@ -81,10 +81,17 @@ $(function(){
 
     $(".left li").on("click",function(){
         var n = $(this).index();
+        var iName = $(this).find("a div:eq(0) i").attr("class");
+        var title = $(this).find("a div:eq(0)").text().trim();
+
 
         $(".center .mainBox:eq("+ n +"),.center .market:eq("+ n +"),.center .score:eq("+ n +"),.center .result:eq("+ n +")")
         .addClass("display")
         .siblings().removeClass("display");
+
+        $(".center .topfix ul ol.leftSide .gameName i")
+        .attr('class', iName)
+        .next().text(title);
     })
 
     $(".left .smallList").on("click",function(){
@@ -368,6 +375,11 @@ $(function(){
         {
             $(".center .mixpass")
             .removeClass("display");
+
+            $(".mixpass .content .countingBox").find("table")
+            .remove();
+
+            $(".mixpass .title p span").text(0);
         }
 
         event.stopPropagation();
@@ -378,12 +390,68 @@ $(function(){
         $(".mixpass")
         .removeClass("display");
 
+        $(".market table button")
+        .removeClass("mixStyle active");
+
         $(this).find(".smallList:eq(0)")
         .addClass("active")
         .siblings()
         .removeClass("active");
+
+        $(".mixpass .content .countingBox").find("table")
+        .remove();
+
+        $(".mixpass .title p span").text(0);
     })
 
+    $(".calbtn").on("click",function(event){
+        $(".jumpWindow")
+        .removeClass("display");
+
+        $(".filter,.calcWindow")
+        .addClass("display");
+
+        event.stopPropagation();
+    })
+
+    $(document).on("click",".mixStyle",function(){
+        var val = $(".market .mixStyle.active").length + 1;
+        var gName = $(".topfix ul ol.leftSide .gameName").text().trim()+ "-" ;
+        var tableNum = $(".mixpass .content .countingBox").find("table:last-child").index() + 2;
+        var tdName = $(this).eq();
+        var gtitle = $(this).closest("table").find("th:eq(0)").text().trim();
+        var teama = $(this).closest("tr").find("td:eq(0) div p:eq(0)").text();
+        var teamb = $(this).closest("tr").find("td:eq(0) div p:eq(1)").text();
+        var score = $(this).closest("button:not(span)").text().trim();
+
+        $(this)
+        .toggleClass("active")
+        .siblings().removeClass("active");
+
+        $(this).closest("td")
+        .siblings().find("button")
+        .removeClass("active");
+
+        $(".mixpass .title p span").text(val);
+        $(".mixpass .content .betbox .tit span.num").text(val);
+
+        var n ;
+
+        $(this).closest("tr").find("td").each(function(){
+
+            if($(this).find("button").hasClass("active"))
+            {
+                var abc = $(this).index();
+
+                 n = $(this).closest("tr").siblings().find("th").eq(abc).text().trim();
+            }
+        })
+
+        $(".mixpass .content .countingBox")
+        .append("<table><tr><th colspan='3'><p>"+ (gName + n) +"</p></th></tr><tr><td><p>"+ tableNum +"<span>|</span></p></td><td><p>[主]阿爾利亞迪貝魯特<span class='separate'>@</span><span class='point'>0.92</span></p></td><td><p class='gameName'>" + (gtitle + n) +"</p><p class='teamA'>" + teama + "<span>158平</span></p><p class='vs'>VS</p><p class='teamB'>" + teamb + "</p></td></tr></table>");
+        
+    })
+    
     $('.mixpass .title').click(function(){
         $(this).parent()
         .toggleClass("active");
@@ -405,25 +473,6 @@ $(function(){
         }
     })
 
-    $(".calbtn").on("click",function(event){
-        $(".jumpWindow")
-        .removeClass("display");
-
-        $(".filter,.calcWindow")
-        .addClass("display");
-
-        event.stopPropagation();
-    })
-
-    $(document).on("click",".mixStyle",function(){
-        $(this)
-        .toggleClass("active")
-        .siblings().removeClass("active");
-
-        $(this).closest("td")
-        .siblings().find("button")
-        .removeClass("active");
-    })
 
     var f = 0;
     $(".mixpass .calculate button").on("click",function(){
